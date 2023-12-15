@@ -23,10 +23,10 @@
    - Achieve accurate object detection based on color, size, and distance.
 
 2. **Distance Measurement:**
-   - Measure the distance between the detected object and the Raspberry Pi camera.
+   - Measure the distance between the detected object (known object) and the Raspberry Pi camera.
 
 3. **Width Calculation:**
-   - Determine the width of the detected object.
+   - Measure the width of the detected object (known object).
 
 4. **Focal Length Calculation:**
    - Calculate the focal length of the camera using the formula: `F = (P X D) / W`, where:
