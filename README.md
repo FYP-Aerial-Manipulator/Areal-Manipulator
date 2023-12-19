@@ -25,13 +25,3 @@ The primary goal of our project is to develop a sophisticated aerial manipulator
 
 ### Project Documentation
 For detailed information about our project, you can refer to our [Proposal Slides](https://docs.google.com/presentation/d/1Jg4BUWk_vuytMHE_5gfl9hUfFdjgxDdrF2js1-FZGCw/edit#slide=id.p15).
-
-### Project Structure
-- **/assets:** This directory contains project-related assets, including images and other media.
-- **/code:** The codebase for the project, organized into relevant subdirectories for different components.
-- **/docs:** Project documentation, including specifications, manuals, and research papers.
-
-
-
-
-
