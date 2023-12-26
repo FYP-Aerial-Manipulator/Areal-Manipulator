@@ -10,12 +10,28 @@
 - Use the captured images to calibrate the camera and obtain intrinsic and distortion matrices.
 - Provide details of the intrinsic and distortion parameters in the README.
 
-# Sample Intrinsic Matrix
-intrinsic_matrix = [[fx, 0, cx],
-                    [0, fy, cy],
-                    [0, 0, 1]]
-# Sample Distortion Coefficients
-distortion_coefficients = [k1, k2, p1, p2, k3]
+## Camera Calibration Parameters
+
+### Intrinsic Matrix
+The intrinsic matrix represents the internal parameters of the camera, essential for understanding the geometric properties of the image. It is defined as:
+| fx 0 cx |
+| 0 fy cy |
+| 0 0 1 |
+
+Where:
+- **fx**: Horizontal focal length
+- **fy**: Vertical focal length
+- **cx**: Horizontal principal point
+- **cy**: Vertical principal point
+
+### Distortion Coefficients
+Distortion coefficients account for lens distortion in the camera. They are represented as a vector:
+[k1, k2, p1, p2, k3]
+
+Where:
+- **k1, k2, k3**: Radial distortion coefficients
+- **p1, p2**: Tangential distortion coefficients
+
 
 ### Step 3: ArUco Marker Detection
 - Implement ArUco marker detection using the calibrated camera. 
