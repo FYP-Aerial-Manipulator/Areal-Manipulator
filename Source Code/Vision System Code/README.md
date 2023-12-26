@@ -37,7 +37,6 @@ Distortion coefficients account for lens distortion in the camera. They are repr
 
 | k1 | k2 | p1 | p2 | k3 |
 |----|----|----|----|----|
-|    |    |    |    |    |
 
 
 </div>
