@@ -14,9 +14,11 @@
 
 ### Intrinsic Matrix
 The intrinsic matrix represents the internal parameters of the camera, essential for understanding the geometric properties of the image. It is defined as:
-| fx 0 cx |
-| 0 fy cy |
-| 0 0 1 |
+| fx | 0  | cx |
+|----|----|----|
+| 0  | fy | cy |
+| 0  | 0  | 1  |
+
 
 Where:
 - **fx**: Horizontal focal length
