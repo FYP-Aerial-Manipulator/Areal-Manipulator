@@ -14,10 +14,15 @@
 
 ### Intrinsic Matrix
 The intrinsic matrix represents the internal parameters of the camera, essential for understanding the geometric properties of the image. It is defined as:
+<div align="center">
+
 | fx | 0  | cx |
 |----|----|----|
 | 0  | fy | cy |
 | 0  | 0  | 1  |
+
+</div>
+
 
 
 Where:
@@ -28,7 +33,16 @@ Where:
 
 ### Distortion Coefficients
 Distortion coefficients account for lens distortion in the camera. They are represented as a vector:
-[k1, k2, p1, p2, k3]
+<div align="center">
+
+| k1 | k2 | p1 | p2 | k3 |
+|----|----|----|----|----|
+|    |    |    |    |    |
+
+
+</div>
+
+
 
 Where:
 - **k1, k2, k3**: Radial distortion coefficients
