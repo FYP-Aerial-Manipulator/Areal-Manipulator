@@ -54,3 +54,8 @@ Where:
 ### Step 4: Print 3D Coordinates
 - Use the camera matrices to convert ArUco marker patterns into 3D coordinates.
 - Display or print the details of the detected ArUco markers, including their 3D coordinates.
+
+
+### Test Images
+![image](https://github.com/FYP-Aerial-Manipulator/Areal-Manipulator/assets/81348451/284c5ded-0828-4e29-955d-2aab1064cf01)
+
