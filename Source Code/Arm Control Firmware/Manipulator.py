@@ -1,35 +1,46 @@
 from time import sleep
 import numpy as np
-
-def set_motor(motor__pin_no, angle):
-    pass
-
+from adafruit_servokit import ServoKit
 
 class Manipulator:
     def __init__(self, dof, pins, init_config):
         self.dof = dof
         self.pins = pins
+
+        # Initialize the PCA9685 module and servo kit
+        self.kit = ServoKit(channels=16)
+        # Set the frequency of the PWM signal
+        for i in self.pins:
+            self.kit.servo[i].set_pulse_width_range(500, 2500)
+        print("manipulator initiated!!!")
+        
         self.config = init_config
         self.write_config(init_config)
+        sleep(3)   # time to acquire initial position
         self.open_grip()
+
+
     
     def write_config(self, config):
         for i in range(self.dof):
-            set_motor(self.pins[i], config[i])
+            self.move_servo(self.pins[i], config[i])
         self.config = config
     
     def close_grip(self):
-        set_motor(self.pins[3], 40)
+        self.move_servo(self.pins[3], 80)
+        print("gripper closed!")
 
     def open_grip(self):
-        set_motor(self.pins[3], 30)
+        self.move_servo(self.pins[3], 30)
+        print("gripper opened!")
 
     def follow_trajectory(self, traj, delay):
-        trajlen = len(traj[0])
+        trajlen = traj.shape[1]
+        print("length of the trajectory: ", trajlen)
         for i in range(trajlen):
             safe_angles = self.safe_limits(traj[:,i])
             self.write_config(safe_angles)
-            print("following:", safe_angles)
+            # print("following:", safe_angles)
 
             sleep(delay)
     
@@ -51,5 +62,9 @@ class Manipulator:
             print("Trimmed angles:", out_degrees)
 
         return out_degrees
+    
+    def move_servo(self, motor__pin_no, angle):
+        self.kit.servo[motor__pin_no].angle = angle
+        # sleep(1)  # Give the servo some time to move
 
     
