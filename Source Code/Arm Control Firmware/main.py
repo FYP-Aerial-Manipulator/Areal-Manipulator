@@ -10,10 +10,11 @@ def main():
     # take input
     # user_text = input("Enter desired coordinate: ").split(' ')  # x y z coordinates
     # des_coord = [float(i) for i in user_text if i]
-    des_coord = [10, 10, 20]
+    des_coord = [0, 20, 20]
     print("Entered coordinate:", des_coord)
+    sleep(2)
 
-    pins = [0, 1, 2, 3]
+    pins = [0, 4, 8, 12]
     init_config = [90, 90, 90, 90]
 
     arm = Manipulator.Manipulator(3, pins, init_config)
@@ -27,20 +28,23 @@ def main():
     req_config = inverse_kine.inverse_kine(des_coord)
 
     # trajectory generation
-    time_dur = 5
-    freq = 5
-    time_at_via = 3.5
+    time_dur = 10
+    freq = 50
+    time_at_via = 7
     _, traj = trajectory_gen.trajectory_gen(arm.config, via_config, req_config, time_at_via, time_dur, freq) 
 
     # follow trajectory in class function
     delay = 1/freq
+    print("trajectory:", traj.shape)
     arm.follow_trajectory(traj, delay)
+    sleep(2)
     arm.close_grip()
-    print("Object grapped!")
-    sleep(1)
+    sleep(2)
+    # print("Object grapped!")
+    
 
     # lifting object
-    rev_time_dur = 2
+    rev_time_dur = 10
     _, rev_traj = trajectory_gen.rev_trajectory_gen(arm.config, init_config, rev_time_dur, freq)
     arm.follow_trajectory(rev_traj, delay)
 
