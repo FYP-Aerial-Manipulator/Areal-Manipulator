@@ -12,7 +12,7 @@ class Manipulator:
         # Set the frequency of the PWM signal
         for i in self.pins:
             self.kit.servo[i].set_pulse_width_range(500, 2500)
-        print("manipulator initiated!!!")
+        # print("manipulator initiated!!!")
         
         self.config = init_config
         self.write_config(init_config)
@@ -36,7 +36,7 @@ class Manipulator:
 
     def follow_trajectory(self, traj, delay):
         trajlen = traj.shape[1]
-        print("length of the trajectory: ", trajlen)
+        # print("length of the trajectory: ", trajlen)
         for i in range(trajlen):
             safe_angles = self.safe_limits(traj[:,i])
             self.write_config(safe_angles)
