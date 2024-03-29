@@ -11,7 +11,7 @@ def inverse_kine(des_coord):
     r = sqrt(x**2 + y**2)
     a = sqrt(x**2 + y**2 + z**2)
 
-    angle_1 = degrees(atan2(x, -y))
+    angle_1 = degrees(atan2(x, -y)) - 15
     angle_2 = degrees(atan2(z, r) + acos((l1**2 + a**2 - l2**2)/(2*a*l1)))
     angle_3 = degrees(acos((l1**2 + l2**2 - a**2)/(2*l1*l2)))
     
