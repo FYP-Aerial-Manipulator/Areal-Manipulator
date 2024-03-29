@@ -27,12 +27,14 @@ class Manipulator:
         self.config = config
     
     def close_grip(self):
-        self.move_servo(self.pins[3], 80)
+        self.move_servo(self.pins[3], 36)
         print("gripper closed!")
+        sleep(1)
 
     def open_grip(self):
-        self.move_servo(self.pins[3], 30)
+        self.move_servo(self.pins[3], 20)
         print("gripper opened!")
+        sleep(1)
 
     def follow_trajectory(self, traj, delay):
         trajlen = traj.shape[1]
@@ -54,7 +56,7 @@ class Manipulator:
         out_degrees[1] = max(30, min(160, out_degrees[1]))
 
         # Joint 3 limits
-        out_degrees[2] = max(60, min(160, out_degrees[2]))
+        out_degrees[2] = max(30, min(160, out_degrees[2]))
 
         if np.any(out_degrees != degrees):
             print("Warning!!! Joint angle trimmed!!!")
