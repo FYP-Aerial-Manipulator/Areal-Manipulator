@@ -2,8 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def minimum_jerk_trajectory(init_pos, target_pos, total_time=5, dt=0.1):
-    xi = init_pos
-    xf = target_pos
+    xi = np.array(init_pos)
+    xf = np.array(target_pos)
     d = total_time
     list_t = []
     list_x = []

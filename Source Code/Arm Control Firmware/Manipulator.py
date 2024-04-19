@@ -27,22 +27,22 @@ class Manipulator:
         self.config = config
     
     def close_grip(self):
-        self.move_servo(self.pins[3], 36)
+        self.move_servo(self.pins[3], 45)
         print("gripper closed!")
         sleep(1)
 
     def open_grip(self):
-        self.move_servo(self.pins[3], 20)
+        self.move_servo(self.pins[3], 23)
         print("gripper opened!")
         sleep(1)
 
     def follow_trajectory(self, traj, delay):
-        trajlen = traj.shape[1]
+        trajlen = traj.shape[0]
         # print("length of the trajectory: ", trajlen)
         for i in range(trajlen):
-            safe_angles = self.safe_limits(traj[:,i])
+            safe_angles = self.safe_limits(traj[i,:])
             self.write_config(safe_angles)
-            # print("following:", safe_angles)
+            print("following:", safe_angles)
 
             sleep(delay)
     
