@@ -6,9 +6,11 @@
 
 <p align="center">
   <img src="https://github.com/FYP-Aerial-Manipulator/Areal-Manipulator/assets/81348451/f705fdb4-31b1-444e-bd91-4b522f14cbfd" alt="Aerial Manipulator Image">
-  ![image](https://github.com/FYP-Aerial-Manipulator/Areal-Manipulator/assets/81348451/4efb84f2-06f9-4d6b-8cb0-87fb8daf4ca8)
-
 </p>
+<p align="center">
+  <img src="https://github.com/FYP-Aerial-Manipulator/Areal-Manipulator/assets/81348451/f705fdb4-31b1-444e-bd91-4b522f14cbfd" alt="Aerial Manipulator Image">
+</p>
+
 
 ### About Us
 We are a dedicated team of four undergraduate students from the University of Moratuwa, Sri Lanka, specializing in Electronics and Telecommunications Engineering. Our Final Year Project (FYP) is an ambitious endeavor aimed at creating a cutting-edge system involving a drone equipped with a robotic arm, capable of performing precise manipulations using RTK GPS and computer vision technology.
