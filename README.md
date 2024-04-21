@@ -3,11 +3,12 @@
 ## Welcome to the GitHub Repository of FYP-Aerial-Manipulator
 
 <p align="center">
-  <img src="https://github.com/FYP-Aerial-Manipulator/Areal-Manipulator/assets/81348451/f705fdb4-31b1-444e-bd91-4b522f14cbfd" alt="Aerial Manipulator Image">
+  <img src="https://github.com/FYP-Aerial-Manipulator/Areal-Manipulator/assets/81348451/9108c7e4-0af5-4cd6-a386-0b13f4deb7e1" alt="Drone Image">
 </p>
 <p align="center">
   <img src="https://github.com/FYP-Aerial-Manipulator/Areal-Manipulator/assets/81348451/b864b3b5-b519-41dc-a7f7-1639689d0c77" alt="Second Image">
 </p>
+
 
 
 
